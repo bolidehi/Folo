@@ -141,10 +141,11 @@ export const EntryItemWrapper: FC<
       // )
 
       navigate({
+        view,
         entryId: entry.id,
       })
     },
-    [asRead, entry?.id, entry?.feedId, navigate],
+    [asRead, entry?.id, entry?.feedId, navigate, view],
   )
   const [isContextMenuOpen, setIsContextMenuOpen] = useState(false)
   const showContextMenu = useShowContextMenu()
@@ -203,7 +204,7 @@ export const EntryItemWrapper: FC<
   })
 
   const aiEnabled = useFeature("ai")
-  const isWide = views[view as FeedViewType]?.wideMode || aiEnabled
+  const isWide = views.find((v) => v.view === view)?.wideMode || aiEnabled
 
   const Link = view === FeedViewType.SocialMedia ? "article" : NavLink
 
