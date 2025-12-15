@@ -59,7 +59,7 @@ jobs:
 
       # Optional: Upload artifact
       - name: 📤 Upload IPA
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: app-ios-development-device
           path: apps/mobile/build.ipa
@@ -108,7 +108,7 @@ jobs:
 
       # Optional: Upload artifact
       - name: 📤 Upload IPA
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: app-ios-development-device
           path: apps/mobile/build.ipa
@@ -152,7 +152,7 @@ jobs:
 
       # Optional: Upload artifact
       - name: 📤 Upload IPA
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: app-ios-development-simulator
           path: apps/mobile/build-simulator.ipa
